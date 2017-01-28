@@ -37,26 +37,29 @@ import java.util.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-    	
+	public static void main(String[] args) {
+		/*
+		 * Enter your code here. Read input from STDIN. Print output to STDOUT.
+		 * Your class should be named Solution.
+		 */
+
 		Scanner stdin = new Scanner(System.in);
 		String message = stdin.nextLine();
 		StringBuilder sBuilder = new StringBuilder();
-		
-		for(int i=0; i<message.length();i++){
-			if(message.charAt(i)==' '||message.charAt(i)=='.'){
+
+		for (int i = 0; i < message.length(); i++) {
+			if (message.charAt(i) == ' ' || message.charAt(i) == '.') {
 				sBuilder.append(message.charAt(i));
 				continue;
 			}
-			int num = message.charAt(i)-'a';
+			int num = message.charAt(i) - 'a';
 			sBuilder.append(num);
-			if(num>9){
+			if (num > 9) {
 				sBuilder.append('#');
 			}
 		}
 		System.out.println(sBuilder.toString());
-    	stdin.close();
-    	
-    }
+		stdin.close();
+
+	}
 }
